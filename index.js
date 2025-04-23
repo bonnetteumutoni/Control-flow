@@ -71,3 +71,42 @@ const deliveryType=(deliveries)=>{
   printComment(["Fun","Weird","Good"]);
 
   //Write a program that loops through an array of user login statuses and prints "Welcome back!" if the user is "logged in" or "Please log in" otherwise.
+
+
+
+
+ // Write a program that processes an array of support ticket priorities using a switch statement to print how quickly each one should be addressed 
+ // based on whether the priority is "low", "medium", or "high".
+ const ticketPriorities=(priorities)=>{
+    priorities.forEach(priority=>{
+        switch(priority){
+            case "high":
+                console.log("High priority ticket");
+                break;
+            case "medium":
+                console.log("Medium priority ticket");
+                break;
+            case "low":
+            console.log("Low priority ticket");
+            break;
+            default:
+            console.log("Invalid ticket");
+            break;
+        }
+    }
+
+    )
+ }
+ const priorityType=["high","medium","low"];
+ ticketPriorities(priorityType);
+
+
+ //Create a while loop that simulates a quiz countdown from 10 seconds, printing each number until it reaches 0.
+ const quizCountdown=()=>{
+    let seconds=10;
+    while(seconds>=0){
+        console.log(`Remaining ${seconds} seconds`);
+        seconds--;
+    }
+ }
+ quizCountdown();
