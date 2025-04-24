@@ -28,15 +28,14 @@ const deliveryType=(deliveries)=>{
    // Create a program that loops through an array of book statuses and prints "Ready to lend" if the status is "available" or 
    // "Checked out" if the status is "borrowed".
    function bookStatuses(status){
-    if(status=="Ready"){
+    for(let i=0;i<status.length;i++){
+    if(status[i]=="available"){
         console.log("Ready to lend");
-    }else if(status=="Available"){
-        console.log("Available");
-    }else{
-        console.log("Borrowed")
+    }else {
+        console.log("Checked out");
     }
-   }
-   bookStatuses(["Ready","Available","Borrowed"])
+   }}
+   bookStatuses(["available","Borrowed"])
 
    //Given an array of customer ages, write a program that checks each age and prints "Adult" if the age is 18 or above, and "Minor" otherwise.
 
@@ -71,8 +70,16 @@ const deliveryType=(deliveries)=>{
   printComment(["Fun","Weird","Good"]);
 
   //Write a program that loops through an array of user login statuses and prints "Welcome back!" if the user is "logged in" or "Please log in" otherwise.
-
-
+  function loginStatus(statusDetails){
+  for(let i=0;i<statusDetails.length;i++){
+    if(statusDetails[i]=="logged in"){
+        console.log("Welcome back!")
+    }else{
+        console.log("Please log in")
+    }
+  }
+  }
+loginStatus(["logged in","not logged in"])
 
 
  // Write a program that processes an array of support ticket priorities using a switch statement to print how quickly each one should be addressed 
